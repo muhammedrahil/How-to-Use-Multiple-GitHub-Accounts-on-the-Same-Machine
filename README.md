@@ -15,3 +15,21 @@ ssh-keygen -t ed25519 -C "personal_email@example.com"
 ```
 
 When prompted for a file in which to save the key, choose a unique name and location, such as `~/.ssh/any_name_enter_here`.
+
+### Example
+
+```bash
+$ ssh-keygen -t ed25519 -C "work_email@example.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/MyPc/.ssh/id_ed25519):
+Enter passphrase (empty for no passphrase):
+```
+
+If you want to change the file name, enter a new path:
+
+```bash
+$ ssh-keygen -t ed25519 -C "work_email@example.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/MyPc/.ssh/id_ed25519): /c/Users/MyPc/.ssh/any_name_enter_here
+Enter passphrase (empty for no passphrase):
+```
