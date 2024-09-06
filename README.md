@@ -1,3 +1,4 @@
+
 # How to Use Multiple GitHub Accounts on the Same Machine
 
 Working with multiple GitHub accounts on the same machine can be challenging, especially when it comes to managing separate SSH keys and repositories. In this article, we will guide you through the process of setting up and using multiple GitHub accounts on your computer, making your development workflow more efficient and organized.
@@ -33,7 +34,6 @@ Generating public/private ed25519 key pair.
 Enter file in which to save the key (/c/Users/MyPc/.ssh/id_ed25519): /c/Users/MyPc/.ssh/any_name_enter_here
 Enter passphrase (empty for no passphrase):
 ```
-
 
 ## Step 2: Add the SSH Key to the SSH Agent
 
@@ -106,7 +106,6 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDYjVY0dPurupQoAHBbT4Lef4XgSN+GWCvd//T61mSyD
 - Create a new SSH key.
 - Paste the content of the `.pub` file (as shown above).
 
-
 ### Test Again
 
 After adding the key, test again:
@@ -163,4 +162,3 @@ git push personal main
 ```
 
 That's it! Now you're all set to manage multiple GitHub accounts on the same machine.
-
