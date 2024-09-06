@@ -33,3 +33,32 @@ Generating public/private ed25519 key pair.
 Enter file in which to save the key (/c/Users/MyPc/.ssh/id_ed25519): /c/Users/MyPc/.ssh/any_name_enter_here
 Enter passphrase (empty for no passphrase):
 ```
+
+
+## Step 2: Add the SSH Key to the SSH Agent
+
+To add the newly generated SSH key to the SSH agent, run these commands in your terminal:
+
+```bash
+eval "$(ssh-agent -s)"
+```
+
+Then add your keys:
+
+```bash
+ssh-add ~/.ssh/personal
+ssh-add ~/.ssh/work
+```
+
+Example:
+
+```bash
+MyPc@DESKTOP ~
+$ cd .ssh/
+
+MyPc@DESKTOP ~/.ssh
+$ ls
+config  id_rsa.pub   known_hosts.old  personal.pub  work.pub
+id_rsa  known_hosts  personal         work
+```
+
