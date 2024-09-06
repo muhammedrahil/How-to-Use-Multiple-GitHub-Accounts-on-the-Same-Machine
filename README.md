@@ -106,3 +106,61 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDYjVY0dPurupQoAHBbT4Lef4XgSN+GWCvd//T61mSyD
 - Create a new SSH key.
 - Paste the content of the `.pub` file (as shown above).
 
+
+### Test Again
+
+After adding the key, test again:
+
+```bash
+MyPc@DESKTOP ~/.ssh
+$ ssh -T git@github.com-personal
+Hi yourname! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+## Step 5: Managing Multiple Repositories
+
+### Cloning a Repository
+
+To clone a repository from one of your GitHub accounts, use the following command, replacing `github.com-personal` with the appropriate Host value and `your_username` and `your_repository` with the correct information:
+
+```bash
+git clone git@github.com-personal:your_username/your_repository.git
+```
+
+Next, configure Git:
+
+```bash
+git config user.email personal_email@example.com
+git config user.name your_username
+```
+
+### Pushing Changes to a Repository
+
+To push changes to a repository, navigate to the local repository folder and execute the following commands:
+
+```bash
+git add .
+git commit -m "Your commit message"
+git push
+```
+
+### Push Files into a New Repository
+
+To push files into your new repository:
+
+```bash
+git config user.email personal_email@example.com
+git config user.name your_username
+```
+
+```bash
+git init
+git add .
+git commit -m "Your commit message"
+git branch -M main
+git remote add personal git@github.com-personal:your_username/your_repository.git
+git push personal main
+```
+
+That's it! Now you're all set to manage multiple GitHub accounts on the same machine.
+
