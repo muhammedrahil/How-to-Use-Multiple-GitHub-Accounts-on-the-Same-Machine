@@ -80,3 +80,29 @@ Host github.com-personal
   IdentityFile ~/.ssh/personal
 ```
 
+## Step 4: Test the Configuration
+
+To test your configuration, run the following command for each account, replacing "github.com-work" or "github.com-personal" with the correct Host value from your config file:
+
+```bash
+MyPc@DESKTOP ~/.ssh
+$ ssh -T git@github.com-work
+git@github.com: Permission denied (publickey).
+```
+
+If you encounter this issue, check if the public key is added to the appropriate GitHub account.
+
+### Add Your Public Key to GitHub
+
+To add your public key, print the content of the `.pub` file and copy it:
+
+```bash
+MyPc@DESKTOP ~/.ssh
+$ cat personal.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDYjVY0dPurupQoAHBbT4Lef4XgSN+GWCvd//T61mSyD personal_email@example.com
+```
+
+- Go to GitHub settings under SSH keys.
+- Create a new SSH key.
+- Paste the content of the `.pub` file (as shown above).
+
