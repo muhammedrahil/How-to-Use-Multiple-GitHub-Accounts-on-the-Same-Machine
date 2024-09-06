@@ -62,3 +62,21 @@ config  id_rsa.pub   known_hosts.old  personal.pub  work.pub
 id_rsa  known_hosts  personal         work
 ```
 
+## Step 3: Configuring GitHub Accounts
+
+To configure your GitHub accounts, create a new file called `config` in the `~/.ssh` directory:
+
+```bash
+MyPc@DESKTOP ~/.ssh
+$ cat config
+Host github.com-work
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/work
+
+Host github.com-personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/personal
+```
+
