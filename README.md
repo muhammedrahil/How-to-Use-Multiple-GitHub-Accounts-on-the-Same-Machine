@@ -122,6 +122,8 @@ Hi yourname! You've successfully authenticated, but GitHub does not provide shel
 
 To clone a repository from one of your GitHub accounts, use the following command, replacing `github.com-personal` with the appropriate Host value and `your_username` and `your_repository` with the correct information:
 
+`Note : Need to take ssh type git repository url`
+
 ```bash
 git clone git@github.com-personal:your_username/your_repository.git
 ```
